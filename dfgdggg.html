@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>BioWeapon Systems — الفهرس الكامل للأنظمة البيولوجية</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Cairo",sans-serif}
+body{background:#000;color:#0f0;overflow-x:hidden}
+body:before{content:"";position:fixed;top:0;left:0;width:100%;height:100%;background: repeating-linear-gradient(to bottom,rgba(0,255,0,0.03),rgba(0,255,0,0.03) 2px,transparent 2px,transparent 4px);pointer-events:none;z-index:1000;}
+header{padding:60px 20px;text-align:center;background:linear-gradient(to bottom,#000,#020902);border-bottom:2px solid #0f0;}
+header h1{font-size:45px;letter-spacing:3px;text-shadow:0 0 20px #0f0;animation:glow 3s infinite linear;}
+@keyframes glow{0%{text-shadow:0 0 10px #0f0}50%{text-shadow:0 0 25px #0f0}100%{text-shadow:0 0 10px #0f0}}
+nav{margin-top:30px}
+nav a{color:#0f0;margin:0 15px;font-size:20px;text-decoration:none;transition:0.3s}
+nav a:hover{text-shadow:0 0 15px #0f0}
+section{padding:60px 30px;border-bottom:1px solid #0f0}
+section h2{font-size:32px;margin-bottom:25px;text-shadow:0 0 15px #0f0}
+section p{font-size:20px;line-height:1.8;margin-bottom:25px}
+.card{background:rgba(0,255,0,0.05);border:1px solid #0f0;padding:25px;border-radius:10px;margin-bottom:20px;transition:0.3s}
+.card:hover{transform:scale(1.02);box-shadow:0 0 20px #0f0}
+footer{padding:30px;text-align:center;border-top:1px solid #0f0;margin-top:60px}
+.matrix{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;color:#0f0;font-size:15px;opacity:0.2;white-space:nowrap;animation:matrixMove 20s linear infinite}
+@keyframes matrixMove{from{transform:translateY(-100%)}to{transform:translateY(100%)}}
+</style>
+</head>
+<body>
+<div class="matrix">
+0101010100101010010101011101010001010101010010101001010101<br>
+1010101100101010110101010010100101010110101010010101011010<br>
+0101101001010101101010100101011010010101011010101001010101
+</div>
+<header>
+    <h1>أنظمة السلاح البيولوجي — BioWeapon Systems</h1>
+    <nav>
+        <a href="#agents">العوامل البيولوجية</a>
+        <a href="#delivery">أنظمة الإيصال</a>
+        <a href="#defense">الدفاع والوقاية</a>
+    </nav>
+</header>
+<section id="agents">
+    <h2>العوامل البيولوجية الرئيسية</h2>
+    <div class="card"><h3>البكتيريا</h3><p>تشمل أنواع خطيرة مثل الجمرة الخبيثة، الطاعون، الكوليرا.</p></div>
+    <div class="card"><h3>الفيروسات</h3><p>مثل الجدري، الإيبولا، وفيروسات الهيموراچيك.</p></div>
+    <div class="card"><h3>السموم البيولوجية</h3><p>مثل توكسين البوتولينوم والريسين.</p></div>
+</section>
+<section id="delivery">
+    <h2>أنظمة إيصال السلاح البيولوجي</h2>
+    <div class="card"><h3>الرذاذ الجوي</h3><p>يعتمد على نشر العامل في الهواء.</p></div>
+    <div class="card"><h3>التلوث الغذائي والمائي</h3><p>نشر العامل عبر الطعام أو الماء.</p></div>
+    <div class="card"><h3>الناقلات الحشرية</h3><p>استخدام الحشرات لنشر العدوى.</p></div>
+    <div class="card"><h3>القذائف والصواريخ</h3><p>رؤوس حربية مخصصة لنشر العوامل.</p></div>
+</section>
+<section id="defense">
+    <h2>الدفاع والوقاية</h2>
+    <div class="card"><h3>الإنذار المبكر</h3><p>أجهزة استشعار تكشف العوامل في الهواء والماء.</p></div>
+    <div class="card"><h3>الإجراءات الوقائية</h3><p>تطعيمات، عزل، حماية شخصية.</p></div>
+</section>
+<footer>
+    © 2025 — BioWeapon Systems Interface
+</footer>
+
+<!-- Interactive Mega Section -->
+<section id="interactive" style="padding:60px 30px;border-top:2px solid #0f0;">
+<h2 style="text-shadow:0 0 15px #0f0;font-size:32px;margin-bottom:25px;">المنطقة التفاعلية — Interactive Ops Center</h2>
+
+<!-- QUIZ MODULE -->
+<div class="card">
+<h3>اختبار تفاعلي (Quiz)</h3>
+<p>اختر الإجابة الصحيحة:</p>
+<p><strong>ما هو أكثر نظام إيصال شائع؟</strong></p>
+<button onclick="quizAnswer('صح')" style="margin:5px;">الرذاذ الجوي</button>
+<button onclick="quizAnswer('خطأ')" style="margin:5px;">القذائف</button>
+<p id="quizResult" style="margin-top:15px;"></p>
+</div>
+
+<!-- SIMULATION SYSTEM -->
+<div class="card">
+<h3>محاكاة تفاعلية (Simulation)</h3>
+<p>اختر عامل + نظام إيصال:</p>
+<select id="agentSel" style="padding:5px;margin:5px;">
+<option>بكتيريا</option>
+<option>فيروس</option>
+<option>سم بيولوجي</option>
+</select>
+<select id="deliverySel" style="padding:5px;margin:5px;">
+<option>الرذاذ الجوي</option>
+<option>التلوث الغذائي</option>
+<option>الناقلات الحشرية</option>
+</select>
+<button onclick="simulate()" style="padding:5px 15px;margin:5px;">تشغيل المحاكاة</button>
+<p id="simOut" style="margin-top:15px;"></p>
+</div>
+
+<!-- CLICK-REVEAL SECTION -->
+<div class="card">
+<h3>معلومات مخفية (Click to Reveal)</h3>
+<p onclick="reveal(this)" style="cursor:pointer;">اضغط هنا لإظهار معلومة 🔒</p>
+<p id="hiddenInfo" style="display:none;">هذه معلومة تفاعلية تظهر عند الضغط.</p>
+</div>
+
+<!-- TERMINAL MODE -->
+<div class="card">
+<h3>Terminal Hack Mode</h3>
+<p>اكتب أمر:</p>
+<input id="termIn" style="padding:5px;width:60%;" placeholder="run status..."/>
+<button onclick="terminalRun()" style="padding:5px 15px;">تنفيذ</button>
+<p id="termOut" style="margin-top:15px;"></p>
+</div>
+
+<script>
+function quizAnswer(x){
+document.getElementById('quizResult').innerHTML = x==='صح' ? '✔ إجابة صحيحة' : '✖ خطأ';}
+function simulate(){
+let a=document.getElementById('agentSel').value;
+let b=document.getElementById('deliverySel').value;
+document.getElementById('simOut').innerHTML = `تم اختيار <strong>${a}</strong> عبر <strong>${b}</strong>.`;
+}
+function reveal(el){document.getElementById('hiddenInfo').style.display='block';}
+function terminalRun(){let cmd=document.getElementById('termIn').value;document.getElementById('termOut').innerHTML=`تنفيذ الأمر: ${cmd}`;}
+</script>
+
+</section>
+</body>
+</html>
